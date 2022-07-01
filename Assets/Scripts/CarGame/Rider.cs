@@ -34,6 +34,7 @@ public class Rider : MonoBehaviour
         {
             pickedUpSet.Add(particle);
             RiderPickedUpEvent.Raise();
+            AudioManager.instance.Play("RiderPickup");
             Destroy(this.gameObject);
         }
     }

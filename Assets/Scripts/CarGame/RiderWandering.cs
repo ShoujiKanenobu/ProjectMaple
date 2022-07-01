@@ -14,15 +14,23 @@ public class RiderWandering : MonoBehaviour
 
     public bool inPlay;
 
+    public Animator anim;
+
     private void Start()
     {
         startingPoint = this.transform.position;
+        inPlay = true;
+
     }
 
     void Update()
     {
         if (!inPlay)
+        {
+            anim.SetFloat("speed", 0);
             return;
+        }
+            
 
         if (!wandering)
         {
@@ -35,6 +43,8 @@ public class RiderWandering : MonoBehaviour
         }
         else
         {
+            anim.SetFloat("speed", 0.2f);
+            this.transform.LookAt(destination);
             this.transform.position = Vector3.MoveTowards(transform.position, destination, wanderSpeed * Time.deltaTime);
             if (Vector3.Distance(this.transform.position, destination) < wanderBuffer)
                 wandering = false;

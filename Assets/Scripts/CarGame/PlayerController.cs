@@ -1,7 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class PlayerController : MonoBehaviour
     private float horizontal, vertical;
 
     public GameObject returnSpot;
+
+    public AudioSource engineSoundSource;
+    public float soundThreshold;
+
+    public AudioSource honkSoundSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +49,9 @@ public class PlayerController : MonoBehaviour
             smokeVFX.SetActive(true);
         else
             smokeVFX.SetActive(false);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            honkSoundSource.Play();
     }
 
     public void FixedUpdate()
@@ -53,6 +62,10 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = rb.velocity.normalized * maxSpeed;
         }
+
+
+        engineSoundSource.pitch = 1 + ((rb.velocity.magnitude / maxSpeed) * 0.5f);
+
     }
 
     private void ApplyForces(float horizontal, float vertical)

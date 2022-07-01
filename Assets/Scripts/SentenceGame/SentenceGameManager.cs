@@ -146,6 +146,7 @@ public class SentenceGameManager : MonoBehaviour
     {
         if (condition)
         {
+            AudioManager.instance.Play("success");
             StartFlash(.25f, .5f, Color.green);
             levelComplete.SetActive(true);
             levelComplete.transform.localScale = new Vector3(0, 0, 0);
@@ -156,6 +157,7 @@ public class SentenceGameManager : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.Play("wrong");
             StartFlash(.25f, .5f, Color.red);
         }
     }

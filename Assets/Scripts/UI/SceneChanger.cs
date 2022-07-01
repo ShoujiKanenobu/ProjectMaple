@@ -7,9 +7,17 @@ public class SceneChanger : MonoBehaviour
 {
     public string nextScene;
 
-    public void GoNextScene()
+    public DifficultyHelper d; 
+
+    public void GoNextScene(bool CheckDifficulty)
     {
-        SceneManager.LoadScene(nextScene);
+        if (CheckDifficulty)
+        {
+            if(d.difficutly != 0)
+                SceneManager.LoadScene(nextScene);
+        }    
+        else
+            SceneManager.LoadScene(nextScene);
     }
 
 }

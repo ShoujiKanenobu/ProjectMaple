@@ -12,7 +12,8 @@ public class ParsedSentences
     public string FullSentence;
     public int Difficulty;
 
-    readonly public static List<string> ParticleList = new List<string>{ "‚Í", "‚É", "‚ª", "‚ð", "‚Ö", "‚Ì", "‚ð", "‚Æ" };
+    readonly public static List<string> ParticleList = new List<string>{ "‚Í", "‚É", "‚ª", "‚ð", "‚Ö", "‚Ì", 
+        "‚ð", "‚Æ", "‚©‚ç", "‚Ü‚Å", "‚æ‚è", "‚â", "‚à", "‚Å", "‚æ‚è", "‚©"};
 
     public ParsedSentences(int difficulty, string unparsed)
     {
