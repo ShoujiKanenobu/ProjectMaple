@@ -8,7 +8,7 @@ Also created for my senior project
 ![Gameplay 1](https://github.com/ShoujiKanenobu/ProjectMaple/blob/main/Assets/GitScreens/2Capture.PNG)
 ![Gameplay 2](https://github.com/ShoujiKanenobu/ProjectMaple/blob/main/Assets/GitScreens/3Capture.PNG)
 
-##Thoughts on the project
+## Thoughts on the project
 
 I learned a lot doing this project, most specifically about optimization and working with a client. There is a lot I would change if I did this project again, most specifically to do with project architecture. Because of the nature of the deadlines, refactoring wasn't a viable option, leading to very messy code. After a lot of studying when things failed however, I am confident I wont make the same mistakes.
 
