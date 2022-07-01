@@ -1,4 +1,8 @@
-# ProjectMaple
-A Japanese language learning game designed to help students learn about sentence particles. Still in development.
+## ProjectMaple
+#A Japanese language learning game designed to help students learn about sentence particles. Still in development.
+Created for Maple Japanese Study: https://maplejs.com/ 
 
-Due to time constraints, I haven't refactored this code at all. Very messy, but I learned a lot from it and the game works. 
+Screenshots
+![Main Menu](https://github.com/ShoujiKanenobu/ProjectMaple/blob/main/Assets/GitScreens/Capture.PNG)
+
+With the wonderful help of assets from https://www.kenney.nl/assets 
